@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[Floors]
 (
-	[floornumber] INT NOT NULL  IDENTITY, 
+	[floornumber] INT NOT NULL, 
     [play_id] UNIQUEIDENTIFIER NOT NULL, 
     [path_per_floor] NVARCHAR(50) NULL, 
     [gold_per_floor] NVARCHAR(50) NULL, 

@@ -67,6 +67,7 @@
     <Build Include="Floors.sql" />
     <Build Include="dbo\Tables\Numbers.sql" />
     <Build Include="dbo\Stored Procedures\CreateNumbersTable.sql" />
+    <Build Include="dbo\Stored Procedures\InsertFloors.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="SlayTheSpireDB.refactorlog" />
