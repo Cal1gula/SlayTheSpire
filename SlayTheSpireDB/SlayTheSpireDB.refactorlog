@@ -77,4 +77,25 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="[CK_json_raw_validation]" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="77169e33-9e9e-41dd-86dc-1a2a34b9e915" ChangeDateTime="02/18/2018 21:33:12">
+    <Property Name="ElementName" Value="[dbo].[Floors].[path_taken]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Floors]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="path_per_floor" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="0e3d6d9d-665a-404a-81ee-265b85e68557" ChangeDateTime="02/18/2018 21:34:22">
+    <Property Name="ElementName" Value="[dbo].[Floors].[gold]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Floors]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="gold_per_floor" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="c8a716b5-c7be-4950-a798-44b3d09c8ff0" ChangeDateTime="02/18/2018 21:35:28">
+    <Property Name="ElementName" Value="[dbo].[Floors].[cu]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Floors]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="current_hp_per_floor" />
+  </Operation>
 </Operations>
