@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="0996ce87-8dbd-46f4-b5b5-7a068fe7ad23" ChangeDateTime="02/18/2018 00:50:33">
+    <Property Name="ElementName" Value="[dbo].[Runs].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Runs]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="RunId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="47358039-589d-4bfb-808c-bdf72527a1c2" ChangeDateTime="02/18/2018 00:51:29">
+    <Property Name="ElementName" Value="[dbo].[Runs].[RunId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Runs]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Play_Id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="d579261e-8d57-4ea4-acc5-ed07c0db300c" ChangeDateTime="02/18/2018 01:02:51">
+    <Property Name="ElementName" Value="[dbo].[Runs].[RunId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Runs]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="runid" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="4738ef74-da19-4f3f-a09e-3c5940a48cb4" ChangeDateTime="02/18/2018 01:02:56">
+    <Property Name="ElementName" Value="[dbo].[Runs].[Play_Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Runs]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="play_id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f386cc5a-a39d-4124-8a9a-07c7e83dcd67" ChangeDateTime="02/18/2018 01:02:59">
+    <Property Name="ElementName" Value="[dbo].[Runs].[Seed_Played]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Runs]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="seed_played" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="b1c7d2b3-7af3-468a-84b1-c0bb5585c198" ChangeDateTime="02/18/2018 01:03:09">
+    <Property Name="ElementName" Value="[dbo].[Runs].[Character_Chosen]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Runs]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="character_chosen" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="36ebff41-f35b-4569-ab48-75c31e9e44b3" ChangeDateTime="02/18/2018 01:03:19">
+    <Property Name="ElementName" Value="[dbo].[Runs].[Playtime]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Runs]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="playtime" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="11aac6f3-9641-4cb8-af36-415bd020b1d0" ChangeDateTime="02/18/2018 01:15:41">
+    <Property Name="ElementName" Value="[dbo].[Runs].[is]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Runs]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="is_daily" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="c5353298-037c-441b-bae0-e33111265d84" ChangeDateTime="02/18/2018 01:16:14">
+    <Property Name="ElementName" Value="[dbo].[Runs].[is_ascension]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Runs]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="is_ascension_mode" />
+  </Operation>
+</Operations>
