@@ -56,7 +56,7 @@ LEFT JOIN Floors f
 	AND f.floornumber = n.Number
 WHERE 
 	r.play_id = @play_id
-	AND N.Number <= r.floor_reached 
+	AND N.Number < r.floor_reached 
 	AND f.play_id IS NULL;
 
 END
