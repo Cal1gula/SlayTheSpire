@@ -70,6 +70,7 @@
     <Build Include="dbo\Stored Procedures\CreateNumbersTable.sql" />
     <Build Include="dbo\Stored Procedures\InsertFloors.sql" />
     <Build Include="Storage\ftCatalog.sql" />
+    <Build Include="Decks.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="SlayTheSpireDB.refactorlog" />
