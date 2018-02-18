@@ -60,6 +60,7 @@
     <Folder Include="dbo\" />
     <Folder Include="dbo\Tables\" />
     <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="Storage\" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Runs.sql" />
@@ -68,6 +69,7 @@
     <Build Include="dbo\Tables\Numbers.sql" />
     <Build Include="dbo\Stored Procedures\CreateNumbersTable.sql" />
     <Build Include="dbo\Stored Procedures\InsertFloors.sql" />
+    <Build Include="Storage\ftCatalog.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="SlayTheSpireDB.refactorlog" />

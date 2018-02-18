@@ -6,7 +6,7 @@
     [gold_per_floor] NVARCHAR(50) NULL, 
     [max_hp_per_floor] INT NULL, 
     [current_hp_per_floor] INT NULL, 
-    [vhp_percentage_per_floor] AS CONVERT(DECIMAL(18,2), (current_hp_per_floor * 1.0 / max_hp_per_floor * 1.0) * 100), 
+    [vhp_percentage_per_floor] AS (CONVERT([decimal](18,2),((([current_hp_per_floor]*(1.0))/[max_hp_per_floor])*(1.0))*(100))), 
     CONSTRAINT [PK_Floors] PRIMARY KEY ([floornumber], [play_id]), 
     CONSTRAINT [FK_Floors_Runs] FOREIGN KEY ([play_id]) REFERENCES [Runs]([play_id]) ON DELETE CASCADE
 )

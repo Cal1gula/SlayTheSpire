@@ -916,5 +916,8 @@
       <Name>dbo</Name>
       <Name>InsertFloors</Name>
     </SelectedItem>
+    <SelectedItem Type="Microsoft.Data.Tools.Schema.Sql.SchemaModel.SqlFullTextCatalog, Microsoft.Data.Tools.Schema.Sql, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>ftCatalog</Name>
+    </SelectedItem>
   </ExcludedTargetElements>
 </SchemaComparison>

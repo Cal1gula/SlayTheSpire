@@ -19,8 +19,12 @@
     [is_daily] BIT NULL DEFAULT 0, 
     [is_ascension_mode] BIT NULL DEFAULT 0, 
     [is_trial] BIT NULL DEFAULT 0, 
-    [json_raw] NVARCHAR(MAX) NOT NULL, 
-    PRIMARY KEY  ([play_id]), 
+    [json_raw] NVARCHAR(MAX) NOT NULL,
+	--[vpath_per_floor] AS JSON_QUERY(json_raw,'$.path_per_floor'),
+	--[vgold_per_floor] AS JSON_QUERY(json_raw,'$.gold_per_floor'),
+	--[vmax_hp_per_floor] AS JSON_QUERY(json_raw, '$.max_hp_per_floor'),
+	--[vcurrent_hp_per_floor] AS JSON_QUERY(json_raw, '$.current_hp_per_floor'),
+    CONSTRAINT PK_ID PRIMARY KEY  ([play_id]), 
     CONSTRAINT [CK_json_raw_validation] CHECK (ISJSON( json_raw )> 0 ) 
 )
 
@@ -196,3 +200,24 @@ EXEC sp_addextendedproperty @name = N'MS_Description',
     @level1name = N'Runs',
     @level2type = N'COLUMN',
     @level2name = N'json_raw'
+GO
+
+--CREATE INDEX [IX_Runs_vpath_per_floor] ON [dbo].[Runs] ([vpath_per_floor])
+
+
+--GO
+
+--CREATE INDEX [IX_Runs_vgold_per_floor] ON [dbo].[Runs] ([vgold_per_floor])
+
+--GO
+
+--CREATE INDEX [IX_Runs_vmax_hp_per_floor] ON [dbo].[Runs] ([vmax_hp_per_floor])
+
+--GO
+
+--CREATE INDEX [IX_Runs_vcurrent_hp_per_floor] ON [dbo].[Runs] ([vcurrent_hp_per_floor])
+
+--GO
+
+
+CREATE FULLTEXT INDEX ON [dbo].[Runs] ([json_raw]) KEY INDEX [PK_ID]  WITH CHANGE_TRACKING AUTO
