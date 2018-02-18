@@ -61,8 +61,13 @@
   <ItemGroup>
     <Build Include="Runs.sql" />
     <Build Include="InsertRun.sql" />
+    <Build Include="Floors.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="SlayTheSpireDB.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CompareVStoSERVER.scmp" />
+    <None Include="CompareSERVERtoVS.scmp" />
   </ItemGroup>
 </Project>

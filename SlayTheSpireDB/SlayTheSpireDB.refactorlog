@@ -63,4 +63,18 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="is_ascension_mode" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="fab6bd5f-3027-464a-b548-b2d979978bc5" ChangeDateTime="02/18/2018 14:12:40">
+    <Property Name="ElementName" Value="[dbo].[Floors].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Floors]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="floorsid" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="754e6fb2-9877-4787-af9a-0b850d06e7c3" ChangeDateTime="02/18/2018 14:17:56">
+    <Property Name="ElementName" Value="[dbo].[CK_Runs_Column]" />
+    <Property Name="ElementType" Value="SqlCheckConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[Runs]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[CK_json_raw_validation]" />
+  </Operation>
 </Operations>

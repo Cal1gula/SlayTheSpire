@@ -20,7 +20,8 @@
     [is_ascension_mode] BIT NULL DEFAULT 0, 
     [is_trial] BIT NULL DEFAULT 0, 
     [json_raw] NVARCHAR(MAX) NOT NULL, 
-    PRIMARY KEY  ([play_id]) 
+    PRIMARY KEY  ([play_id]), 
+    CONSTRAINT [CK_json_raw_validation] CHECK (ISJSON( json_raw )> 0 ) 
 )
 
 GO
