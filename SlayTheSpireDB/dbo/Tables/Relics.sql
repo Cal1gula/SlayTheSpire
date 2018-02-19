@@ -1,0 +1,4 @@
+﻿CREATE TABLE [dbo].[Relics]
+(
+	[relic] NVARCHAR(50) NOT NULL PRIMARY KEY
+)

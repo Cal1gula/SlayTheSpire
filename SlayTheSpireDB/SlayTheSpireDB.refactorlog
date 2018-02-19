@@ -119,4 +119,11 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="card" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="22966850-2cca-4914-93ff-20e24b4c9495" ChangeDateTime="02/19/2018 01:27:26">
+    <Property Name="ElementName" Value="[dbo].[Relics].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Relics]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="relic" />
+  </Operation>
 </Operations>
