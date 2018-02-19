@@ -1,32 +1,29 @@
-﻿CREATE TABLE [dbo].[Runs]
-(
-	[play_id] UNIQUEIDENTIFIER NOT NULL, 
-	[seed_played] BIGINT NOT NULL,
-    [build_version] nvarchar(255) NOT NULL,
-    [character_chosen] NVARCHAR(50) NOT NULL, 
-    [playtime] INT NOT NULL, 
-	[victory] BIT NULL DEFAULT 0,
-    [score] INT NULL DEFAULT 0, 
-    [gold] INT NULL DEFAULT 0, 
-    [floor_reached] INT NULL DEFAULT 0, 
-    [campfire_rested] INT NULL DEFAULT 0, 
-    [campfire_upgraded] INT NULL DEFAULT 0, 
-    [purchased_purges] INT NULL DEFAULT 0, 
-    [player_experience] INT NULL DEFAULT 0, 
-    [killed_by] NVARCHAR(255) NULL, 
-    [ascension_level] INT NULL DEFAULT 0, 
-    [is_prod] BIT NULL DEFAULT 0, 
-    [is_daily] BIT NULL DEFAULT 0, 
-    [is_ascension_mode] BIT NULL DEFAULT 0, 
-    [is_trial] BIT NULL DEFAULT 0, 
-    [json_raw] NVARCHAR(MAX) NOT NULL,
-	--[vpath_per_floor] AS JSON_QUERY(json_raw,'$.path_per_floor'),
-	--[vgold_per_floor] AS JSON_QUERY(json_raw,'$.gold_per_floor'),
-	--[vmax_hp_per_floor] AS JSON_QUERY(json_raw, '$.max_hp_per_floor'),
-	--[vcurrent_hp_per_floor] AS JSON_QUERY(json_raw, '$.current_hp_per_floor'),
-    CONSTRAINT PK_ID PRIMARY KEY  ([play_id]), 
-    CONSTRAINT [CK_json_raw_validation] CHECK (ISJSON( json_raw )> 0 ) 
-)
+﻿CREATE TABLE [dbo].[Runs] (
+    [play_id]           UNIQUEIDENTIFIER NOT NULL,
+    [seed_played]       BIGINT           NOT NULL,
+    [build_version]     NVARCHAR (255)   NOT NULL,
+    [character_chosen]  NVARCHAR (50)    NOT NULL,
+    [playtime]          INT              NOT NULL,
+    [victory]           BIT              DEFAULT ((0)) NULL,
+    [score]             INT              DEFAULT ((0)) NULL,
+    [gold]              INT              DEFAULT ((0)) NULL,
+    [floor_reached]     INT              DEFAULT ((0)) NULL,
+    [campfire_rested]   INT              DEFAULT ((0)) NULL,
+    [campfire_upgraded] INT              DEFAULT ((0)) NULL,
+    [purchased_purges]  INT              DEFAULT ((0)) NULL,
+    [player_experience] INT              DEFAULT ((0)) NULL,
+    [killed_by]         NVARCHAR (255)   NULL,
+    [ascension_level]   INT              DEFAULT ((0)) NULL,
+    [is_prod]           BIT              DEFAULT ((0)) NULL,
+    [is_daily]          BIT              DEFAULT ((0)) NULL,
+    [is_ascension_mode] BIT              DEFAULT ((0)) NULL,
+    [is_trial]          BIT              DEFAULT ((0)) NULL,
+    [json_raw]          NVARCHAR (MAX)   NOT NULL,
+    CONSTRAINT [PK_ID] PRIMARY KEY CLUSTERED ([play_id] ASC),
+    CONSTRAINT [CK_json_raw_validation] CHECK (isjson([json_raw])>(0))
+);
+
+
 
 GO
 EXEC sp_addextendedproperty @name = N'MS_Description',
@@ -220,4 +217,9 @@ GO
 --GO
 
 
-CREATE FULLTEXT INDEX ON [dbo].[Runs] ([json_raw]) KEY INDEX [PK_ID]  WITH CHANGE_TRACKING AUTO
+CREATE FULLTEXT INDEX ON [dbo].[Runs]
+    ([json_raw] LANGUAGE 1033)
+    KEY INDEX [PK_ID]
+    ON [ftCatalog];
+
+

@@ -63,14 +63,14 @@
     <Folder Include="Storage\" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Runs.sql" />
-    <Build Include="InsertRun.sql" />
-    <Build Include="Floors.sql" />
     <Build Include="dbo\Tables\Numbers.sql" />
     <Build Include="dbo\Stored Procedures\CreateNumbersTable.sql" />
     <Build Include="dbo\Stored Procedures\InsertFloors.sql" />
     <Build Include="Storage\ftCatalog.sql" />
-    <Build Include="Decks.sql" />
+    <Build Include="dbo\Tables\Floors.sql" />
+    <Build Include="dbo\Tables\Decks.sql" />
+    <Build Include="dbo\Tables\Runs.sql" />
+    <Build Include="dbo\Stored Procedures\InsertRun.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="SlayTheSpireDB.refactorlog" />
