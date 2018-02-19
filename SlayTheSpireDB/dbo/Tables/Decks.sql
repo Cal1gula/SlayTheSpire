@@ -1,9 +1,22 @@
 ﻿CREATE TABLE [dbo].[Decks]
 (
-	[play_id] UNIQUEIDENTIFIER NOT NULL , 
-    [card] NVARCHAR(50) NOT NULL, 
-    CONSTRAINT [PK_Decks] PRIMARY KEY ([play_id]), 
-    CONSTRAINT [FK_Decks_Runs] FOREIGN KEY ([play_id]) REFERENCES [Runs]([play_id]) ON DELETE CASCADE
+	[play_id] UNIQUEIDENTIFIER NOT NULL,
+	[key_index] INT NOT NULL,
+    [card_full] NVARCHAR(50) NOT NULL, 
+	[card] AS			CASE 
+						WHEN CHARINDEX('+', [card_full]) > 0
+						THEN SUBSTRING([card_full], 0, CHARINDEX('+', [card_full])) 
+						ELSE SUBSTRING([card_full], CHARINDEX('+', [card_full])  + 1, LEN([card_full]))
+						END PERSISTED,
+    [upgrade_level] AS	CASE 
+						WHEN CHARINDEX('+', [card_full]) > 0
+						THEN SUBSTRING([card_full], CHARINDEX('+', [card_full])  + 1, LEN([card_full]))
+						ELSE SUBSTRING([card_full], 0, CHARINDEX('+', [card_full])) 
+						END PERSISTED
+
+    CONSTRAINT [PK_Decks] PRIMARY KEY ([play_id], [key_index]), 
+    CONSTRAINT [FK_Decks_Runs] FOREIGN KEY ([play_id]) REFERENCES [Runs]([play_id]) ON DELETE CASCADE, 
+    CONSTRAINT [FK_Decks_Cards] FOREIGN KEY ([card]) REFERENCES [Cards]([card])
 )
 
 GO

@@ -105,4 +105,18 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="play_id" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="03e40562-7aeb-4d19-b590-708326003414" ChangeDateTime="02/19/2018 00:35:33">
+    <Property Name="ElementName" Value="[dbo].[Cards].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Cards]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Card" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="2d565922-dee7-46da-ad24-740ca65407d5" ChangeDateTime="02/19/2018 00:36:22">
+    <Property Name="ElementName" Value="[dbo].[Cards].[Card]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Cards]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="card" />
+  </Operation>
 </Operations>

@@ -1,0 +1,4 @@
+﻿CREATE TABLE [dbo].[Cards]
+(
+	[card] NVARCHAR(50) NOT NULL PRIMARY KEY
+)
