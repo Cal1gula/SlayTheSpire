@@ -9,7 +9,12 @@ BEGIN
 SET NOCOUNT ON;
 
 DECLARE @SQL NVARCHAR(MAX) = N'';
---SET @JSON = N'D:\Steam\steamapps\common\SlayTheSpire\runs\IRONCLAD\1518908754.run';
+
+IF @JSON = N''
+BEGIN
+	SET @JSON = N'D:\Steam\steamapps\common\SlayTheSpire\runs\THE_SILENT\1520744774.run'
+END;
+
 SET @SQL = N'SELECT * FROM OPENROWSET (BULK ''' + @JSON + ''', SINGLE_CLOB) AS j';
 
 DROP TABLE IF EXISTS #JSON;
